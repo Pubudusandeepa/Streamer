@@ -13,8 +13,9 @@ class GoogleAuth extends React.Component{
               scope: 'email'
           }).then(() =>{
               this.auth = window.gapi.auth2.getAuthInstance();
-              this.onAuthChange(this.auth.isSignedIn.get());
               this.setState({isSignedIn: this.auth.isSignedIn.get()})
+              this.onAuthChange(this.auth.isSignedIn.get());
+         
               this.auth.isSignedIn.listen(this.onAuthChange);
          
           })
@@ -45,7 +46,7 @@ class GoogleAuth extends React.Component{
             return <div>I dont know if we are signed in</div>
         }else if(this.state.isSignedIn){
             return(
-              <button onClick={this.onSignOutClick} className="ui red google button">
+              <button onClick = {this.onSignOutClick} className="ui red google button">
               <i className="google icon" />
               Sign Out
               </button>
@@ -53,7 +54,7 @@ class GoogleAuth extends React.Component{
             );
         }else{
             return(
-                <button onClick={this.onSigiInClick} className="ui red google button">
+                <button onClick = {this.onSigiInClick} className="ui red google button">
                 <i className="google icon" />
                 Sign in with Google
                 </button>
