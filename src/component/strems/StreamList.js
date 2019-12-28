@@ -12,7 +12,7 @@ class StreamList extends React.Component {
                return (
               <div className="item" key={stream.id}>
                    <i className ="large middle aligned icon camera" />
-               <div className= "conttent">
+               <div className= "content">
                     {stream.title} 
                <div className="description">{stream.description}</div>
                </div>
