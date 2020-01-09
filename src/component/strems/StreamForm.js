@@ -62,7 +62,7 @@ const validate = formValue =>{
 
 
 
-export default formWrapped= reduxForm({
+export default reduxForm({
      form:'streamForm',
      validate: validate
 })(StreamForm); 
