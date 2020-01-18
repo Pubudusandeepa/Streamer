@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const Modal =  props =>{
+
+    return ReactDOM.createPortal(
+        <div className= "ui dimmer modals visible active">
+            <div className="ui standard modal visible active">
+                 kdmwowjfwjnfj efnwefkln
+            </div>
+
+        </div>
+    );
+
+
+};
+
+export default Modal;
